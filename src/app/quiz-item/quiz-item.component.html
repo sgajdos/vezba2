@@ -1,6 +1,11 @@
 <mat-card>
-<p>{{quizItemData.question}}</p>
-<p [hidden]="quizItemData.hideAnswer">{{quizItemData.answer}}</p>
+<p [ngClass]="{
+  'hidden': quizItemData.hideAnswer,
+  'shown': !quizItemData.hideAnswer
+}">
+{{sn + 1}}. {{quizItemData.question}}</p>
 
+<p appShadow [boxShadow]="'4px 4px 4px red'" [hidden]="quizItemData.hideAnswer">{{quizItemData.answer}}</p>
+<p *ngIf="quizItemData.hideAnswer">Press the button for showing answer.</p>
 <button mat-raised-button color="primary" (click)="toggleHideAnswer()">{{buttonTitle}}</button>
 </mat-card>

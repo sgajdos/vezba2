@@ -10,8 +10,10 @@ import { QuizItem } from '../model/quiz-item.model';
 })
 export class QuizItemComponent implements OnInit, OnChanges {
   @Input() quizItemData: QuizItem;
+  @Input() sn: number;
 
   buttonTitle = 'Prikaži';
+
 
   constructor() { }
 
@@ -24,7 +26,6 @@ export class QuizItemComponent implements OnInit, OnChanges {
       console.log(`${key} - is changed`);
       console.log('Current: - ' + changes[key].currentValue);
       console.log('Previos: - ' + changes[key].previousValue);
-      changes[key].currentValue.buttonTitle
     }
   }
 
