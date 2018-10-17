@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>New pair</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput placeholder="question" #p>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="answer" #o>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="createQuizItem(p.value, o.value)">Add</button>
+  </mat-card-actions>
+</mat-card>

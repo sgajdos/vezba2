@@ -1,0 +1,6 @@
+<mat-card>
+<p>{{quizItemData.question}}</p>
+<p [hidden]="quizItemData.hideAnswer">{{quizItemData.answer}}</p>
+
+<button mat-raised-button color="primary" (click)="toggleHideAnswer()">{{buttonTitle}}</button>
+</mat-card>
